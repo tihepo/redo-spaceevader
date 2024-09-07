@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdgtd1hdis8k7"]
+
+[ext_resource type="PackedScene" uid="uid://cq1u7tuty2qch" path="res://player.tscn" id="1_duyfh"]
+[ext_resource type="PackedScene" uid="uid://c7b0wxkpjbpmg" path="res://meteor_1.tscn" id="2_35pf7"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="2_qnv3w"]
+[ext_resource type="PackedScene" uid="uid://jolfl4js7bpx" path="res://wall_straight.tscn" id="3_l6wbn"]
+
+[sub_resource type="Environment" id="Environment_ca245"]
+background_mode = 1
+background_color = Color(0.0687983, 0.0687983, 0.0687983, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ca245")
+
+[node name="Player" parent="." instance=ExtResource("1_duyfh")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.000434399)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74846e-07, 2, 2)
+light_energy = 4.879
+omni_range = 11.041
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("target")]
+transform = Transform3D(1, -8.74228e-08, -8.74228e-08, 8.74228e-08, 2.98023e-08, 1, -8.74228e-08, -1, 2.98023e-08, 0, 20, 0)
+fov = 86.9
+script = ExtResource("2_qnv3w")
+target = NodePath("../Player")
+
+[node name="Meteor2" parent="." instance=ExtResource("2_35pf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.6, 0, 4)
+
+[node name="Meteor3" parent="." instance=ExtResource("2_35pf7")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.4, 0, -55)
+
+[node name="Meteor4" parent="." instance=ExtResource("2_35pf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.6, 0, -11)
+
+[node name="WallStraight" parent="." instance=ExtResource("3_l6wbn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -16)
+
+[node name="WallStraight2" parent="." instance=ExtResource("3_l6wbn")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 0, -13)
+
+[node name="WallStraight3" parent="." instance=ExtResource("3_l6wbn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13, 0, 10)
+
+[node name="WallStraight4" parent="." instance=ExtResource("3_l6wbn")]
+transform = Transform3D(5.96046e-08, 0, -1, 0, 1, 0, 1, 0, 5.96046e-08, 9, 0, 7)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://jolfl4js7bpx"]
+
+[ext_resource type="PackedScene" uid="uid://c7b0wxkpjbpmg" path="res://meteor_1.tscn" id="1_fdxxw"]
+
+[node name="WallStraight" type="Node3D"]
+
+[node name="Meteor1" parent="." instance=ExtResource("1_fdxxw")]
+transform = Transform3D(2.16375, -1.08187, -1.87386, 0, -2.65004, 1.53, -2.16375, -1.08187, -1.87386, 6.6, 0, -5)
+
+[node name="Meteor6" parent="." instance=ExtResource("1_fdxxw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.4, 0, -6)
+
+[node name="Meteor5" parent="." instance=ExtResource("1_fdxxw")]
+transform = Transform3D(3.49462, -0.833735, 1.75855, 1.90399, 2.21313, -2.73439, -0.403036, 3.22598, 2.33037, -0.4, 0, -6)
+
+[node name="Meteor7" parent="." instance=ExtResource("1_fdxxw")]
+transform = Transform3D(2.16375, -1.08187, -1.87386, -2.09002, -1.73089, -1.41402, -0.560019, 2.27973, -1.96286, -10.4, 0.64395, -5.49412)
+
+[node name="Meteor8" parent="." instance=ExtResource("1_fdxxw")]
+transform = Transform3D(3, 0, 0, 0, 0.776457, 2.89778, 0, -2.89778, 0.776457, -23.4, -0.321975, -5.75294)
+
+[node name="Meteor9" parent="." instance=ExtResource("1_fdxxw")]
+transform = Transform3D(3.49462, -0.833735, 1.75855, 0.103486, 3.68886, 1.54325, -1.94342, -1.30278, 3.24436, -17.4, -0.321975, -5.75294)
